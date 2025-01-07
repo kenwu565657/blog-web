@@ -2,7 +2,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
-import BlogList from './features/blog/blog-list/BlogList';
+import Home from './ui/Home';
 
 function App() {
   const router = createBrowserRouter([
@@ -12,7 +12,7 @@ function App() {
       children: [
         {
           path: '/',
-          element: <BlogList />
+          element: <Home />
         }
       ]
     },
