@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import SearchComponentContainer from "../features/search/SearchComponentContainer";
 
 const HeaderMenu = () => {
 
@@ -6,13 +7,14 @@ const HeaderMenu = () => {
 
     return (
         <div className={headerMenuStyle}>
-            <Link to="/" className={headerMenuStyle}>
+            <SearchComponentContainer></SearchComponentContainer>
+            <Link to="/home" className={headerMenuStyle}>
                 Home
             </Link>
-            <Link to="/" className={headerMenuStyle}>
+            <Link to="/post" className={headerMenuStyle}>
                 Post
             </Link>
-            <Link to="/" className={headerMenuStyle}>
+            <Link to="/about" className={headerMenuStyle}>
                 About
             </Link>
         </div>
