@@ -2,7 +2,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
-import Home from './ui/Home';
+import Home, { homePageLoader } from './ui/page/Home';
 
 function App() {
   const router = createBrowserRouter([
@@ -11,7 +11,8 @@ function App() {
       errorElement: <Error />,
       children: [
         {
-          path: '/',
+          path: '/home',
+          loader: homePageLoader,
           element: <Home />
         }
       ]
