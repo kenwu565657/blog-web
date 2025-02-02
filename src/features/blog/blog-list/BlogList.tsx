@@ -6,9 +6,6 @@ interface BlogListProp {
 }
 
 const BlogList = (blogListProp: BlogListProp) => {
-
-    console.log(blogListProp);
-
     return (
         <div className="w-full">
             <h2 className="text-start border-t-2 border-x-2">Blog Post Total: {blogListProp.blogSearchResult? blogListProp.blogSearchResult.length : 0}</h2>
@@ -18,7 +15,8 @@ const BlogList = (blogListProp: BlogListProp) => {
                 blogListProp.blogSearchResult?.map((blogSummary, i) => {
                     return (
                         <BlogListItem 
-                        key={i} 
+                        key={i}
+                        id={blogSummary.id}
                         title={blogSummary.title} 
                         summary={blogSummary.summary} 
                         authorName={blogSummary.authorName} 

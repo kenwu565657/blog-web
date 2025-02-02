@@ -7,7 +7,6 @@ import useTypedLoaderData from "../../hooks/useTypedLoaderData";
 const Home = () => {
 
     const blogpostList: BlogSearchResult[] = useTypedLoaderData<BlogSearchResult[]>();
-    console.log(blogpostList);
 
     return (
         <div className="">
